@@ -1,9 +1,30 @@
 {
   "version": 2,
   "public": true,
-  "outputDirectory": "/dist",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/frontend"
+      }
+    }
+  ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
-}
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+      "NODE_ENV": "production",
+      "DB_HOST": "153.92.15.31",
+      "DB_USER": "u875409848_novela",
+      "DB_PASSWORD": "9T2Z5$3UKkgSYzE",
+      "DB_DATABASE": "u875409848_novela"
+  }
+} 

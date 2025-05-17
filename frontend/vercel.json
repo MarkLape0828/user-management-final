@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "npm run vercel-build",
-  "outputDirectory": "dist/frontend",
+  "outputDirectory": "dist/angular-signup-verification-boilerplate",
   "framework": "angular",
   "rewrites": [
     { "source": "/assets/(.*)", "destination": "/assets/$1" },
